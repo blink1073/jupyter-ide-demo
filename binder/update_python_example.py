@@ -2,7 +2,7 @@ import json
 import os
 import os.path as osp
 
-here = osp.join(osp.abspath(__file__))
+here = osp.dirname(osp.abspath(__file__))
 
 fname = osp.abspath(osp.join(here, '..', 'index.ipynb'))
 
@@ -23,5 +23,5 @@ data['metadata'] = {
   }
  }
 
- with open(fname, 'w') as fid:
-     json.dump(fid, data)
+with open(fname, 'w') as fid:
+    json.dump(data, fid)
