@@ -4,7 +4,7 @@ import os.path as osp
 
 here = osp.join(osp.abspath(__file__))
 
-fname = osp.abspath(osp.join(here, '..', 'examples', 'Python.ipynb'))
+fname = osp.abspath(osp.join(here, '..', 'index.ipynb'))
 
 with open(fname) as fid:
     data = json.load(fid)

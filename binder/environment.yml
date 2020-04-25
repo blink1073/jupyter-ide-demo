@@ -25,11 +25,6 @@ dependencies:
       - pyls-black
       - pyls-isort
       - pyls-mypy
-  # for R language server and kernel
-  - r
-  - r-irkernel
-  - r-languageserver
-  - rpy2
   # debugger dependencies
   - ptvsd
   - xeus-python=0.7.1

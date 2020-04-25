@@ -12,8 +12,7 @@ jupyter labextension install @krassowski/jupyterlab-lsp install @jupyterlab/debu
 SYSTEM_PYTHON_PREFIX=$(python -c "from __future__ import print_function;import sys; print(sys.prefix)")
 rm $SYSTEM_PYTHON_PREFIX/share/jupyter/kernels/python3/kernel.json
 
-curl -o examples/Magics_and_rpy2.ipynb https://raw.githubusercontent.com/krassowski/jupyterlab-lsp/master/examples/Magics_and_rpy2.ipynb
-curl -o examples/Python.ipynb https://raw.githubusercontent.com/krassowski/jupyterlab-lsp/a39e3f7f87cec3d156fddca554ab5356840dd485/examples/Python.ipynb
+curl -o index.ipynb https://raw.githubusercontent.com/krassowski/jupyterlab-lsp/a39e3f7f87cec3d156fddca554ab5356840dd485/examples/Python.ipynb
 
 # Update the python notebook to use xpython
 python binder/update_python_example.py
