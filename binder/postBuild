@@ -9,8 +9,7 @@ jupyter serverextension enable --sys-prefix --py jupyter_lsp
 jupyter labextension install @krassowski/jupyterlab-lsp install @jupyterlab/debugger@0.2.0 --debug
 
 # Uninstall ipykernel
-SYSTEM_PYTHON_PREFIX=$(python -c "from __future__ import print_function;import sys; print(sys.prefix)")
-rm $SYSTEM_PYTHON_PREFIX/share/jupyter/kernels/python3/kernel.json
+pip uninstall -y ipykernel
 
 curl -o index.ipynb https://raw.githubusercontent.com/krassowski/jupyterlab-lsp/a39e3f7f87cec3d156fddca554ab5356840dd485/examples/Python.ipynb
 
