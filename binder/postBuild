@@ -11,8 +11,11 @@ jupyter labextension install @krassowski/jupyterlab-lsp @jupyterlab/debugger@0.2
 # Uninstall ipykernel
 pip uninstall -y ipykernel
 
-# Download LSP example notebook for ptyhon
+# Download LSP example notebook for Python
 curl -o index.ipynb https://raw.githubusercontent.com/krassowski/jupyterlab-lsp/a39e3f7f87cec3d156fddca554ab5356840dd485/examples/Python.ipynb
+
+# Download the debugger tutorial notebook
+curl -o debugger.ipynb https://raw.githubusercontent.com/jupyterlab/debugger/dfd6bf9d51a7a0cd78ca54f4173fcf527bd4d7fd/examples/index.ipynb
 
 # Update the python notebook to use xpython
 python binder/update_python_example.py
