@@ -6,8 +6,8 @@ channels:
 
 dependencies:
   # runtime dependencies
-  - python >=3.7,<3.8.0a0
-  - jupyterlab >=2,<3.0.0a0
+  - python ==3.9.*
+  - jupyterlab ==3.*
   - notebook=6
   # build dependencies
   - nodejs
@@ -19,12 +19,10 @@ dependencies:
   - pip
   - pylint
   - python-language-server
-  - ujson <=1.35
+  - pyls-black
+  - pyls-isort
+  - pyls-mypy
   - ruamel_yaml
-  - pip: # not-yet-appearing-in-conda-forge
-      - pyls-black
-      - pyls-isort
-      - pyls-mypy
   # debugger dependencies
   - ptvsd
-  - xeus-python=0.7.1
+  - xeus-python ==0.12.*
