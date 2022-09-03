@@ -1,27 +1,18 @@
 import json
+import glob
 import os
 import os.path as osp
 
 here = osp.dirname(osp.abspath(__file__))
 
-fname = osp.abspath(osp.join(here, '..', 'index.ipynb'))
+def select_xpython(fname):
+    with open(fname) as fid:
+        data = json.load(fid)
+    kernelspec = data['metadata']['kernelspec']
+    kernelspec['name'] = kernelspec['display_name'] = 'xpython'
 
-with open(fname) as fid:
-    data = json.load(fid)
+    with open(fname, 'w') as fid:
+        json.dump(data, fid)
 
-data['metadata'] = {
-  "kernelspec": {
-   "display_name": "xpython",
-   "language": "python",
-   "name": "xpython"
-  },
-  "language_info": {
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "version": "3.7.3"
-  }
- }
-
-with open(fname, 'w') as fid:
-    json.dump(data, fid)
+for fname in glob.glob(osp.join(here, os.pardir, '*.ipynb')):
+    select_xpython(fname)
